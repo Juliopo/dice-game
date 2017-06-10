@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "babel-plugin-transform-runtime",
+    "transform-decorators-legacy"
+  ],
+  "presets": [
+    ["es2015", { "modules": false }],
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "presets": ["react-hmre"]
+    },
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}
