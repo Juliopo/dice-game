@@ -20,7 +20,7 @@ export class Dice extends Component {
     const diceImg = isDiceRolling ? rollingDice : diceImgResult;
 
     return (
-      <img src={ diceImg } alt="Dice" className="dice" />
+      <img src={ diceImg } alt={`Dice-${diceResult}`} className='dice' />
     );
   }
 }
