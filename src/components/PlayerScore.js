@@ -16,4 +16,6 @@ PlayerScore.propTypes = {
   playerScore: PropTypes.number.isRequired
 };
 
+PlayerScore.displayName = 'PlayerScore';
+
 export default PlayerScore;

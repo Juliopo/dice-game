@@ -15,4 +15,6 @@ PlayerName.propTypes = {
   playerName: PropTypes.string.isRequired
 };
 
+PlayerName.displayName = 'PlayerName';
+
 export default PlayerName;

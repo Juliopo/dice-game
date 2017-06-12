@@ -32,4 +32,6 @@ PlayerPanelContainer.propTypes = {
   isMyTurn: PropTypes.bool.isRequired,
 };
 
+PlayerPanelContainer.displayName = 'PlayerPanelContainer';
+
 export default PlayerPanelContainer;

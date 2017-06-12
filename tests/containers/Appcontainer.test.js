@@ -10,7 +10,19 @@ describe('<AppContainer />', () => {
     expect(wrapper.getNode()).toBeTruthy();
   });
 
-  test('App should have 6 elements or more', () => {
-    expect(wrapper.props().children.length).toBeGreaterThan(5);
+  test('App should have 6 childs elements', () => {
+    expect(wrapper.props().children.length).toBe(6);
+  });
+
+  test('PlayerPanelContainer should be render as a child, two times', () => {
+    expect(wrapper.find('PlayerPanelContainer').length).toBe(2);
+  });
+
+  test('App should have 3 Btn elements', () => {
+    expect(wrapper.find('Btn').length).toBe(3);
+  });
+
+  test('App should have 1 Dice child element', () => {
+    expect(wrapper.find('Dice').length).toBe(1);
   });
 });

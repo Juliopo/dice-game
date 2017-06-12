@@ -30,4 +30,6 @@ Dice.propTypes = {
   isDiceRolling: PropTypes.bool.isRequired
 };
 
+Dice.displayName = 'Dice';
+
 export default Dice;
