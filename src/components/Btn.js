@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class BtnContainer extends Component {
+export class Btn extends Component {
   render() {
     const { icon, text, action, NameClass } = this.props;
 
@@ -11,11 +11,13 @@ export class BtnContainer extends Component {
   }
 }
 
-BtnContainer.propTypes = {
+Btn.propTypes = {
   icon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   NameClass: PropTypes.string.isRequired,
   action: PropTypes.func.isRequired
 };
 
-export default BtnContainer;
+Btn.displayName = 'Btn';
+
+export default Btn;

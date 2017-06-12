@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 
 import '../styles/styles.css';
 import PlayerPanelContainer from './PlayerPanelContainer';
 import Dice from '../components/Dice';
-import BtnContainer from './BtnContainer';
+import Btn from '../components/Btn';
 import { rollDice, playerTurnAction, newGameAction } from '../actions';
 
 export class AppContainer extends Component {
@@ -15,7 +16,8 @@ export class AppContainer extends Component {
   };
 
   rollsDiceAction = () => {
-    this.props.dispatchRollDice();
+    const diceResult = _.random(1, 6);
+    this.props.dispatchRollDice(diceResult);
   };
 
   holdAction = () => {
@@ -40,19 +42,19 @@ export class AppContainer extends Component {
           playerInfo={ player2 }
           isMyTurn={ playerTurn === 'player2' }
         />
-        <BtnContainer
+        <Btn
           NameClass='btn-new'
           text='New Game'
           icon='ion-ios-plus-outline'
           action={ this.newGameAction }
         />
-        <BtnContainer
+        <Btn
           NameClass='btn-roll'
           text='Rolls Dice'
           icon='ion-ios-loop'
           action={ this.rollsDiceAction }
         />
-        <BtnContainer
+        <Btn
           NameClass='btn-hold'
           text='Hold'
           icon='ion-ios-download-outline'
