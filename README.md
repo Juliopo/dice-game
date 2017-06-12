@@ -17,7 +17,7 @@ A dice game made in React + redux
 ```
 npm install
 ```
-(this will install all the dependencies and the client and server dependencies attached to the project)
+(this will install all the dependencies)
 
 ## Start
 To start the local deploy and run the server go and write in your bash
